@@ -9,11 +9,6 @@ pipeline {
                git branch: 'main', credentialsId: 'bd47ee0c-8b80-466d-b814-08d8a1b0909a', url: 'https://github.com/SuhasAws/TerraformAzure.git'
             }
         }
-        stage('terraform format check') {
-            steps{
-                sh 'terraform fmt'
-            }
-        }
         stage('terraform Init') {
             steps{
                 sh 'terraform init'
